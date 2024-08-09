@@ -1,5 +1,7 @@
 # [Unrated] Binary Game 2 - 24901 
 
+### 내가 푼거 아님! 출처 : https://karma2.tistory.com/5
+
 [문제 링크](https://www.acmicpc.net/problem/24901) 
 
 ### 성능 요약
