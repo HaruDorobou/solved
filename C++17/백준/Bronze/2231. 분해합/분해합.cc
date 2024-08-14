@@ -5,7 +5,7 @@
 
 using namespace std;
 
-int bf(int number) {
+int cal_digit_sum(int number) {
 	// brute force
 
 	int sum = 0;
@@ -17,22 +17,18 @@ int bf(int number) {
 }
 
 int main() {
-	string n;
-	cin >> n;
+	string input_string;
+	cin >> input_string;
 
-	int intN = stoi(n);
-	vector<int> res;
+	int int_number = stoi(input_string);
+	vector<int> ans_vector;
 
-	for (int i = 1; i < intN; i++) {
-		int target = intN - i;
-		if (intN == target + bf(target)) {
-			res.push_back(target);
+	for (int i = 1; i < int_number; i++) {
+		int target = int_number - i;
+		if (int_number == target + cal_digit_sum(target)) {
+			ans_vector.push_back(target);
 		}
 	}
 
-	if (res.empty()) { cout << 0; }
-	else {
-		sort(res.begin(), res.end());
-		cout << res[0];
-	}
+	cout << (ans_vector.empty() ? 0 : *min_element(ans_vector.begin(), ans_vector.end()));
 }
