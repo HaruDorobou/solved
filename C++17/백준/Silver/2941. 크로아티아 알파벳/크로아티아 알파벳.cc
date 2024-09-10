@@ -5,7 +5,7 @@
 
 using namespace std;
 
-vector<string> splitToken(string input, vector<string> resultVector, vector<string> targetWords)
+string splitToken(string input, vector<string> targetWords)
 {
     for (const auto &word : targetWords)
     {
@@ -17,41 +17,18 @@ vector<string> splitToken(string input, vector<string> resultVector, vector<stri
         }
     }
 
-    for (char c : input)
-    {
-        if (c == '#')
-        {
-            resultVector.push_back("#");
-        }
-        else
-        {
-            if (!resultVector.empty() && resultVector.back() != "#")
-            {
-                resultVector.back() += c;
-            }
-            else
-            {
-                resultVector.push_back(string(1, c));
-            }
-        }
-    }
-
-    return resultVector;
+    return input;
 }
 
 int main()
 {
     string stringInput;
+
     cin >> stringInput;
-    vector<string> tokenList;
+
     vector<string> croatia = {"c=", "c-", "dz=", "d-", "lj", "nj", "s=", "z="};
-    tokenList = splitToken(stringInput, tokenList, croatia);
 
-    int tokenCnt = 0;
+    string tokenCnt = splitToken(stringInput, croatia);
 
-    for(string token : tokenList) {
-        tokenCnt += token.length();
-    }
-
-    cout << tokenCnt;
+    cout << tokenCnt.length();
 }
