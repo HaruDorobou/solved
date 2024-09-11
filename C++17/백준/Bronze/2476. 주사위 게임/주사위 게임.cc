@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 #include <algorithm>
 
 using namespace std;
@@ -9,10 +8,8 @@ int main()
     int N;
     cin >> N;
 
-    vector<int> prize;
-
     int d1, d2, d3;
-    int total;
+    int max_prize = 0, total;
     
     for (int i = 0; i < N; i++)
     {
@@ -27,33 +24,33 @@ int main()
             f3 = true;
 
         if (f1 && f2 && f3)
-        {
+        {   
             total = 10000 + (d1 * 1000);
-            prize.emplace_back(total);
+            max_prize = max(max_prize, total);
             continue;
         }
         else if (f1)
         {
             total = 1000 + (d1 * 100);
-            prize.emplace_back(total);
+            max_prize = max(max_prize, total);
         }
         else if (f2)
         {
             total = 1000 + (d1 * 100);
-            prize.emplace_back(total);
+            max_prize = max(max_prize, total);
 
         }
         else if (f3)
         {
             total = 1000 + (d2 * 100);
-            prize.emplace_back(total);
+            max_prize = max(max_prize, total);
         }
         else
         {
             total = max({d1, d2, d3}) * 100;
-            prize.emplace_back(total);
+            max_prize = max(max_prize, total);
         }
     }
 
-    cout << *max_element(prize.begin(), prize.end());
+    cout << max_prize;
 }
