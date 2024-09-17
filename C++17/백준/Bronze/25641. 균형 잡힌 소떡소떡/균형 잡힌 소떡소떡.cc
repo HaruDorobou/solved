@@ -3,33 +3,24 @@
 
 using namespace std;
 
-int main() {
+int main()
+{
     int leng;
     string st;
-    
+
     cin >> leng >> st;
-    int loop = leng;
+    int pos = 0, s = 0, t = 0;
 
-    int pos = 0;
+    for (char c : st)
+    {
+        c == 's' ? s++ : t++;
+    }
 
-    int s = 0, t = 0;
-    while ( loop-- )
-    {   
-        string sub = st.substr(pos, leng);
-        for ( char c : sub)
-        {
-            c == 's' ? s++ : t++;
-        }
-
-        if(s == t)
-        {
-            st = sub;
-            break;
-        }
-        
-        s = t = 0;
+    while (s != t && pos < leng)
+    {
+        st[pos]  == 's' ? s-- : t--;
         pos++;
     }
 
-    cout << st;
-}   
+    cout << st.substr(pos);
+}
