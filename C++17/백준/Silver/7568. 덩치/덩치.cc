@@ -18,19 +18,14 @@ bool compareTag(const Tag &a, const Tag &b)
 {
     if (a.weight != b.weight)
         return a.weight > b.weight;
-    return a.height > b.height;
-}
-
-bool compareId(const Tag &a, const Tag &b)
-{
-    return a.id < b.id;
-}
+    return a.height > b.height;}
 
 int main()
 {
     int n, w, h;
     cin >> n;
     vector<Tag> list;
+    vector<int> result(n);
 
     for (int i = 0; i < n; i++)
     {
@@ -51,12 +46,12 @@ int main()
                 list[i].rank++;
             }
         }
+
+        result[list[i].id] = list[i].rank;
     }
 
-    sort(list.begin(), list.end(), compareId);
-
-    for (const auto &T : list)
+    for (const int &r : result)
     {
-        cout << T.rank << " ";
+        cout << r << " ";
     }
 }
