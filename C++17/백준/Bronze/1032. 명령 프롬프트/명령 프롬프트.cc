@@ -17,7 +17,7 @@ int main()
 
     int len = dir[0].length();
 
-    vector<char> ans;
+    string ans;
 
     for (size_t j = 0; j < len; j++)
     {
@@ -25,26 +25,17 @@ int main()
 
         for (size_t k = 0; k < n - 1; k++)
         {
-            string s1 = dir[k];
-            string s2 = dir[k + 1];
-
-            if (s1[j] != s2[j])
+            if (dir[k][j] != dir[k + 1][j])
             {
                 check = false;
                 break;
             }
         }
 
-        if (check)
-            ans.emplace_back(dir[0].at(j));
-        else
-            ans.emplace_back('?');
+        ans += (check ? dir[0][j] : '?');
     }
 
-    for (char c : ans)
-    {
-        cout << c;
-    }
+    cout << ans;
 
     return 0;
 }
