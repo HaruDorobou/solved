@@ -18,15 +18,15 @@
 
 <p>소떡소떡은 기다란 꼬치에 소세지와 떡을 끼운 음식이다. 편의상 소떡소떡을 알파벳 <code>s</code>와 <code>t</code>로만 구성된 길이 <mjx-container class="MathJax" jax="CHTML" style="font-size: 109%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D441 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math></mjx-assistive-mml><span aria-hidden="true" class="no-mathjax mjx-copytext">$N$</span></mjx-container>의 문자열로 생각하자. 알파벳 <code>s</code>는 소세지를, <code>t</code>는 떡을 의미한다.</p>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/884b11a1-23ca-4099-b3c7-70076eaa4cad/-/preview/"></p>
+<p style="text-align: center;"><img alt="" src=""></p>
 
 <p>위 그림은 길이가 <mjx-container class="MathJax" jax="CHTML" style="font-size: 109%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c37"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>7</mn></math></mjx-assistive-mml><span aria-hidden="true" class="no-mathjax mjx-copytext">$7$</span></mjx-container>인 소떡소떡의 예시이다. 유진이는 소떡소떡을 먹기 전에 소떡소떡을 <em>균형 잡힌 소떡소떡</em>으로 만들려고 한다. 꼬치에 꽂힌 소세지와 떡의 개수가 같을 때 이를 <em>균형 잡힌 소떡소떡</em>이라고 한다. 단, 소세지와 떡이 한 개도 꽂혀있지 않다면 <em>균형잡힌 소떡소떡</em>이 아니다. 위 그림은 소세지가 <mjx-container class="MathJax" jax="CHTML" style="font-size: 109%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c33"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>3</mn></math></mjx-assistive-mml><span aria-hidden="true" class="no-mathjax mjx-copytext">$3$</span></mjx-container>개, 떡이 <mjx-container class="MathJax" jax="CHTML" style="font-size: 109%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c34"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>4</mn></math></mjx-assistive-mml><span aria-hidden="true" class="no-mathjax mjx-copytext">$4$</span></mjx-container>개 꽂혀 있기 때문에 <em>균형 잡힌 소떡소떡</em>이 아니다.</p>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/31eaac4b-36d4-4d92-90e7-6390ba3dd464/-/preview/"></p>
+<p style="text-align: center;"><img alt="" src=""></p>
 
 <p>유진이는 소떡소떡의 맨 왼쪽에 있는 소세지나 떡을 떼어낼 수 있다. 오른쪽은 손잡이 부분이기 때문에 오른쪽에서 떼어내는 것은 불가능하다. 위 그림은 소떡소떡의 맨 왼쪽에 있던 소세지를 떼어낸 그림이다.</p>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/1fb6f39e-75c8-4a6b-bf85-e09b9b2d6563/-/preview/"></p>
+<p style="text-align: center;"><img alt="" src=""></p>
 
 <p>위 그림은 떡 두 개를 더 떼어낸 그림이다. 소세지가 <mjx-container class="MathJax" jax="CHTML" style="font-size: 109%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn></math></mjx-assistive-mml><span aria-hidden="true" class="no-mathjax mjx-copytext">$2$</span></mjx-container>개, 떡이 <mjx-container class="MathJax" jax="CHTML" style="font-size: 109%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mn>2</mn></math></mjx-assistive-mml><span aria-hidden="true" class="no-mathjax mjx-copytext">$2$</span></mjx-container>개 꽂혀 있기 때문에 <em>균형 잡힌 소떡소떡</em>이 되었다.</p>
 
