@@ -1,6 +1,6 @@
 #include <iostream>
-#include <unordered_map>
-#include <set>
+#include <vector>
+#include <map>
 
 using namespace std;
 
@@ -11,38 +11,26 @@ int main()
 
     int N;
     cin >> N;
-    string chars;
 
-    unordered_map<char, int> player_map;
-    set<char> player_list;
+    map<char, int> chars_map;
 
     for (size_t i = 0; i < N; i++)
     {
         string name;
         cin >> name;
 
-        player_map[name[0]]++;
+        chars_map[name[0]]++;
     }
 
-    for (const auto &[ch, count] : player_map)
+    string chars;
+
+    for (const auto &[ch, count] : chars_map)
     {
         if (count >= 5)
-        {
-            player_list.insert(ch);
-        }
+            chars += ch;
     }
 
-    if (player_list.empty())
-    {
-        cout << "PREDAJA";
-    }
-    else
-    {
-        for (char ch : player_list)
-        {
-            cout << ch;
-        }
-    }
+    cout << (chars.empty() ? "PREDAJA" : chars);
 
     return 0;
 }
