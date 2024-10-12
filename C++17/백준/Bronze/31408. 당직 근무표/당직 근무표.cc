@@ -13,10 +13,10 @@ int main()
     cin >> n;
 
     for (int i = 0; i < n; i++)
-    {
+    {   
+        int num;
         cin >> num;
-        count[num]++;
-        max_count = max(max_count, count[num]);
+        max_count = max(max_count, ++count[num]);
     }
 
     cout << (max_count <= (n + 1) / 2 ? "YES" : "NO");
