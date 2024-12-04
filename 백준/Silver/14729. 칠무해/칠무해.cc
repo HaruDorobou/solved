@@ -12,7 +12,7 @@ int main()
     
     size_t n;
     cin >> n;
-    double* arr = new double[n];
+    const int SIZE = n; double arr[SIZE];
 
     for (int i = 0; i < n; i++)
     {
