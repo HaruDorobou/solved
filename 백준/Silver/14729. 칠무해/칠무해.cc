@@ -2,6 +2,7 @@
 #include <vector>
 #include <algorithm>
 #include <iomanip>
+#include <memory>
 
 using namespace std;
 
@@ -12,14 +13,14 @@ int main()
     
     size_t n;
     cin >> n;
-    const int SIZE = n; double arr[SIZE];
+    auto arr = make_unique<double[]>(n);
 
     for (int i = 0; i < n; i++)
     {
         cin >> arr[i];
     }
 
-    sort(arr, arr + n);
+    sort(arr.get(), arr.get() + n);
 
     for (int i = 0; i < 7; i++)
     {
