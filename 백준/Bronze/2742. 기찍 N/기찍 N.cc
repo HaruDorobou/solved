@@ -1,3 +1,3 @@
 #include <iostream>
 using namespace std;
-int main() { int n; cin >> n; while (n > 0) { cout << n << '\n'; n--; } return 0; }
+int main() { int n; for(cin>>n;n;)cout<<n--<<'\n'; return 0; }
