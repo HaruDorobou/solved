@@ -1,28 +1,18 @@
 #include <iostream>
-#include <vector>
-
+#include <queue>
 using namespace std;
-int main()
-{
-    int n, k;
-    cin >> n >> k;
-    vector<int> vec(n);
-    for (int i = 0; i < n; i++)
-        vec[i] = i + 1;
-
+int main() {
+    int n, k; cin >> n >> k;
+    queue<int> que; for (int i = 1; i <= n; i++) que.push(i);
     cout << '<';
-    size_t i = k - 1;
-    do
-    {   
-        if ( i >= vec.size() ) i %= vec.size();
-        
-        if(vec.size() == 1) {
-            cout << vec[i];
-            break;
+    while(!que.empty()) {
+        for(int i = 1; i < k; i++) {
+            que.push(que.front());
+            que.pop();
         }
-        else cout << vec[i] << ", ";
-        vec.erase(vec.begin() + i);
-        i += k - 1;
-    } while (1);
+        cout << que.front();
+        que.pop();
+        if(!que.empty()) cout << ", ";
+    }
     cout << '>';
 }
