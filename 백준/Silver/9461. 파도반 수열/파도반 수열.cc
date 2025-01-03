@@ -15,7 +15,6 @@ int main()
     for(int i = 4; i <= 101; i++)
         dp[i] = dp[i-2] + dp[i-3];
 
-
     int tc; cin >> tc;
     while (tc--)
     {
